@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{ED1DF0BEB18CC348}Prefabs/Vehicles/Helicopters/Mi8MT/VehParts/Seats/Mi8MT_Asiento_Torreta.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

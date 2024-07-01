@@ -1,0 +1,8 @@
+GameProject {
+ ID "helicoptergun"
+ GUID "61B69E93E05A1694"
+ TITLE "helicopter gun"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}

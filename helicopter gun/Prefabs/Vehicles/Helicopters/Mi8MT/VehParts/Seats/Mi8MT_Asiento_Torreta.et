@@ -1,0 +1,18 @@
+GenericEntity : "{A507D9AE39652BD6}Prefabs/Vehicles/Core/Vehicle_Part_Base.et" {
+ ID "4B42E71698F5739C"
+ components {
+  MeshObject "{4B42E716914465B9}" {
+   Object "{5595D0AFA35E0F2B}Assets/Vehicles/Helicopters/Mi8/VehParts/Seats/Mi8MT_GunnerFrontSeat.xob"
+  }
+  SCR_DamageManagerComponent "{3EBB276D48AFFF41}" {
+   "Additional hit zones" {
+    SCR_DestructibleHitzone DoorRear {
+     HZDefault 1
+     MaxHealth 2000
+     m_pDestructionHandler SCR_DestructionBaseHandler "{61B6AA58EFC61667}" {
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,133 @@
+Turret : "{419D5A88C92E2540}Prefabs/Vehicles/Helicopters/Mi8MT/VehParts/WeapSystems/Mi8MT_PKMT_mount_base.et" {
+ ID "51ACD0965653D003"
+ components {
+  TurretControllerComponent "{51ACD09C61C183E4}" {
+   LimitsHoriz -45 85
+   LimitsVert -45 20
+   TurretUnconsciousPosition 35 0
+  }
+  MeshObject "{51ACD09C4E0B7D16}" {
+   Object "{F65931F3415557A4}Assets/Weapons/MachineGuns/PKMT/PKMT_Mi8_mount_rear.xob"
+  }
+  ProcAnimComponent "{51ACD09DB14C45C0}" {
+   Parameters {
+    ProcAnimParams "{60DCDE19ABC0CD26}" {
+     BoneNames +{
+     }
+    }
+   }
+  }
+  SCR_BaseCompartmentManagerComponent "{51ACFBB07A14CFA6}" {
+   CompartmentSlots {
+    TurretCompartmentSlot TurretCompartment {
+     CompartmentUniqueName "RearTurretCompartment"
+     CompartmentAction SCR_GetInUserAction "{5086CC2CFDD3A05A}" {
+      "Sort Priority" 2
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{509D566648F37562}" {
+      VisibilityRange 15
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D56867A46DBE769}" {
+       ParentContextList {
+        "default"
+       }
+      }
+      SCR_RemoveCasualtyUserAction "{61089D59F48D7BD2}" {
+       ParentContextList +{
+       }
+      }
+      SCR_RemoveCasualtyUserAction "{5D56867A46DBE769}" {
+       ParentContextList {
+        "default"
+       }
+      }
+      SCR_RemoveCasualtyUserAction "{61089D59F48D7BD2}" {
+       ParentContextList +{
+       }
+      }
+      SCR_SwitchSeatAction "{61B69E97490DF9CA}" {
+       ParentContextList {
+        "rearGunner_switch_seat"
+       }
+       UIInfo SCR_ActionUIInfo "{61B69E97490DF9BE}" {
+        Name "#AR-UserAction_SwitchSeat"
+        m_sIconName "mountAsDriverCommand"
+       }
+       Duration 0.5
+       m_bCargoOnly 1
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{B1CB25848A3D93A8}" {
+      PivotID "w_rear_root"
+     }
+     SkipCharacterDoorAnimationsFromSeat 1
+     UIInfo SCR_ActionUIInfo "{50870A10DCCDED83}" {
+      Name "#AR-VehiclePosition_RearGunner"
+     }
+     SidestepAngle 300
+     SidestepMargin 200
+    }
+   }
+  }
+  TurretComponent "{60DCDE19ABC0CD6B}" {
+   components {
+    SightsComponent "{60DCDE19ABC0CD69}" {
+     SightsPosition PointInfo "{61333E84A9F0F603}" {
+      PivotID "snap_weapon"
+      Offset 0 0.1904 -0.2792
+     }
+    }
+   }
+   ikTargets {
+    AnimationIKTargetInfo "{60DCDE19ABC0329B}" {
+     PositionInfo PointInfo "{60DCDE19ABC0329A}" {
+      PivotID "snap_weapon"
+      Offset -0.0891 0.0949 -0.3004
+      Angles 0 -90 90
+     }
+    }
+    AnimationIKTargetInfo "{60DCDE19ABC03298}" {
+     PositionInfo PointInfo "{60DCDE19ABC03297}" {
+      PivotID "snap_weapon"
+      Offset 0.0928 0.0949 -0.2935
+      Angles 0 -90 -90
+     }
+    }
+   }
+  }
+  WeaponSlotComponent "{51ACD09C6BFEEE6A}" {
+   AttachType InventoryStorageSlot "{0AACE7470E421D82}" {
+    PivotID "snap_weapon"
+    Offset 0 0 0
+    Prefab "{517ED1D91D5D2B54}Prefabs/Weapons/MachineGuns/PKM/MG_PKMT_Mi8_rear.et"
+   }
+   WeaponTemplate "{517ED1D91D5D2B54}Prefabs/Weapons/MachineGuns/PKM/MG_PKMT_Mi8_rear.et"
+   WeaponSlotIndex 1
+  }
+  ActionsManagerComponent "{51ACD09C7181BA0B}" {
+   ActionContexts {
+    UserActionContext "{51ACFBB064390C6E}" {
+     Position PointInfo "{51ACFBB061993925}" {
+      Offset -0.2518 0.4165 0.1462
+      Angles 0 -90 0
+     }
+    }
+    UserActionContext "{60DCDE19ABC03288}" {
+     Position PointInfo "{61B69E97490DF98C}" {
+      PivotID "w_weapon_holder_01"
+      Offset -0.1535 0.4165 -0.3261
+     }
+    }
+   }
+  }
+  BaseItemAnimationComponent "{5242E42C7B4B2CEE}" {
+   AnimGraph "{8EB50F8EC27A35BC}Assets/Weapons/MachineGuns/workspaces/PKMT_Mi8.agr"
+   AnimInstance "{63DF5A55DE736752}Assets/Weapons/MachineGuns/workspaces/PKMT_Mi8.asi"
+   AnimInjection AnimationAttachmentInfo "{5242E42C74AC2BF7}" {
+    AnimGraph "{8EB50F8EC27A35BC}Assets/Weapons/MachineGuns/workspaces/PKMT_Mi8.agr"
+    AnimInstance "{63DF5A55DE736752}Assets/Weapons/MachineGuns/workspaces/PKMT_Mi8.asi"
+   }
+  }
+ }
+}
